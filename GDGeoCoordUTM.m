@@ -95,7 +95,6 @@
     }
     
     if (latitude < -80.0 || latitude > 84.0) {
-        [self release];
         self = nil;
         return self;
     }
@@ -182,12 +181,6 @@
 {
     NSString *zone = [self zone];
     return [[zone substringToIndex:[zone length] -1] integerValue];
-}
-
-- (void)dealloc {
-    [_zone release];
-    _zone = nil;
-    [super dealloc];
 }
 
 @end

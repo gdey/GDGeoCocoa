@@ -19,7 +19,6 @@
     } else {
         NSLog(@"Created %@ for %@",m,self);
     }
-    [m autorelease];
     return m;
 }
 
@@ -31,7 +30,6 @@
     } else {
         NSLog(@"Created %@ for %@",u,self);
     }
-    [u autorelease];
     return u;
 }
 @end

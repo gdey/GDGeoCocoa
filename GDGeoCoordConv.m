@@ -18,7 +18,7 @@
 #define kGDGeoCoordConvEllipsoidEccentricityKey 2;
 
 struct ellipsoidStructure {
-    /*__unsafe_unretained*/ NSString* name;
+    __unsafe_unretained NSString* name;
     double radis;
     double eccentricity;
 };
