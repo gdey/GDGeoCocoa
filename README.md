@@ -24,6 +24,8 @@ method to do the conversion for you.
 What is MGRS
 ============
 
+Wikipedia link: http://en.wikipedia.org/wiki/MGRS
+
 TODO
 ====
 
