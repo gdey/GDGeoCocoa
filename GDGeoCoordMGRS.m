@@ -76,14 +76,12 @@
         return nil;
     }
     if (latitude < -80.0 || latitude > 84.0) {
-        [self release];
         self = nil;
         return self;
     }
     
-    GDGeoCoordUTM *utm = [[[GDGeoCoordUTM alloc] initFromEllips:ellips Latitude:latitude andLongitude:longitude] autorelease];
+    GDGeoCoordUTM *utm = [[GDGeoCoordUTM alloc] initFromEllips:ellips Latitude:latitude andLongitude:longitude];
     if (!utm) {
-        [self release];
         self = nil;
         return self;
     }
@@ -268,7 +266,6 @@
     NSAssert([scanner scanInteger:&gzdn], @"Was passed a string that does not look like an mgrs string");
 
     NSInteger location =  [scanner scanLocation] + 1;
-    [scanner release];
     scanner = nil;
     NSString *gzd = [mgrs substringToIndex:location];
     NSString *east_letter = [mgrs substringWithRange:NSMakeRange(location, 1)];
@@ -286,18 +283,5 @@
     
 }
 
-- (void)dealloc {
-    [_zone release];
-    _zone = nil;
-    [_mgrsEast release];
-    _mgrsEast = nil;
-    [_mgrsNorth release];
-    _mgrsNorth = nil;
-    [_letterEast release];
-    _letterEast = nil;
-    [_letterNorth release];
-    _letterNorth = nil;
-    [super dealloc];
-}
 
 @end

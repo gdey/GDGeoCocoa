@@ -33,11 +33,11 @@ typedef enum {
 
 }
 
-@property (retain, nonatomic) NSString* zone;
-@property (retain, nonatomic) NSString* letterEast;
-@property (retain, nonatomic) NSString* letterNorth;
-@property (retain, nonatomic) NSString* mgrsEast;
-@property (retain, nonatomic) NSString* mgrsNorth;
+@property (strong, nonatomic) NSString* zone;
+@property (strong, nonatomic) NSString* letterEast;
+@property (strong, nonatomic) NSString* letterNorth;
+@property (strong, nonatomic) NSString* mgrsEast;
+@property (strong, nonatomic) NSString* mgrsNorth;
 @property (assign, nonatomic) kGDGeoCoordMGRSPrecision precision;
 
 

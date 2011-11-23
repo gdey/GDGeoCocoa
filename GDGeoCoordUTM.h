@@ -20,7 +20,7 @@
     double   _northing;
 }
 
-@property (retain,nonatomic) NSString *zone;
+@property (strong,nonatomic) NSString *zone;
 @property (assign,nonatomic) CLLocationDegrees easting;
 @property (assign,nonatomic) CLLocationDegrees northing;
 
