@@ -30,10 +30,11 @@ TODO
 ====
 
 
-  * The library does not handle polar coordinates, at current. Anything above the 48 degrees Lat. or below -48 degrees Lat. 
-I need to Add that. This requires converting to Polar then to MGRS, where as now we first convert to utm then to mgrs.
+  * The library does not handle polar coordinates, at current. Anything above the 84 degrees N. or below 80 degrees S. 
+I need to Add that. This requires converting to Polar (UPS) then to MGRS, where as now we first convert to utm then to mgrs.
   * Need to convert the other way around, and go back to Lat, Long from MGRS.
   * Need to be able to get the center coorindate, and each vertix of the box.
+  * Alias the description on the mgrs object to the mgrs methods, on the mgrs object.
 
 
 BSD License
@@ -56,3 +57,4 @@ SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECI
 BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING 
 IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.**
+ 

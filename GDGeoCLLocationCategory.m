@@ -13,23 +13,27 @@
 
 - (GDGeoCoordMGRS *) mgrs 
 {
-    GDGeoCoordMGRS *m = [[GDGeoCoordMGRS alloc] initFromCoord:[self coordinate]];
-    if (!m) {
-        NSLog(@"Was not able to create mgrs for %@",self);
-    } else {
-        NSLog(@"Created %@ for %@",m,self);
-    }
-    return m;
+    return [[GDGeoCoordMGRS alloc] initFromCoord:[self coordinate]];
+//    GDGeoCoordMGRS *m = [[GDGeoCoordMGRS alloc] initFromCoord:[self coordinate]];
+//    if (!m) {
+//        NSLog(@"Was not able to create mgrs for %@",self);
+//    } else {
+//        NSLog(@"Created %@ for %@",m,self);
+//    }
+//    [m autorelease];
+//    return m;
 }
 
 - (GDGeoCoordUTM *) utm
 {
-    GDGeoCoordUTM *u = [[GDGeoCoordUTM alloc] initFromCoords:[self coordinate]];
-    if (!u) {
-        NSLog(@"Was not able to create utm for %@", self);
-    } else {
-        NSLog(@"Created %@ for %@",u,self);
-    }
-    return u;
+    return [[GDGeoCoordUTM alloc] initFromCoords:[self coordinate]];
+//    GDGeoCoordUTM *u = [[GDGeoCoordUTM alloc] initFromCoords:[self coordinate]];
+//    if (!u) {
+//        NSLog(@"Was not able to create utm for %@", self);
+//    } else {
+//        NSLog(@"Created %@ for %@",u,self);
+//    }
+//    [u autorelease];
+//    return u;
 }
 @end
