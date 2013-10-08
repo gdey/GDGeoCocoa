@@ -7,6 +7,10 @@
 //
 
 #import "GDGeoCoordUTM.h"
+#import "GDGeoCoordMGRS.h"
+
+// This is for pow
+#include <math.h> 
 
 
 @implementation GDGeoCoordUTM 
@@ -171,6 +175,30 @@
     
 }
 
+- (id) initFromMGRS:(GDGeoCoordMGRS *)mgrs
+{
+   self = [super init];
+   [self setZone:[mgrs zone]];
+   int size = [[mgrs mgrsNorth] length];
+   double northing = 0.0;
+   double easting = 0.0;
+   if( size > 0 ) {
+      double north = [[mgrs mgrsNorth] doubleValue] * 10;
+      double east  = [[mgrs mgrsEast] doubleValue] * 10;
+      double maginatude = pow( 10.0, 5 - size );
+      northing = north * maginatude;
+      easting = east * maginatude;
+   } 
+   [self setEasting:easting];
+   [self setNorthing:northing];
+   return self;
+
+}
+- (id) initFromMGRSString:(NSString *)mgrs 
+{
+   [self initFromMGRS:[GDGeoCoordMGRS initFromString:mgrs]]
+}
+
 - (NSString *)zoneLetter
 {
     NSString *zone = [self zone];
@@ -182,5 +210,7 @@
     NSString *zone = [self zone];
     return [[zone substringToIndex:[zone length] -1] integerValue];
 }
+
+
 
 @end

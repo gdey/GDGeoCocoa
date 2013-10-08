@@ -24,7 +24,19 @@ method to do the conversion for you.
 What is MGRS
 ============
 
-Wikipedia link: http://en.wikipedia.org/wiki/MGRS
+[Wikipedia link](http://en.wikipedia.org/wiki/MGRS)
+
+
+
+SEE ALSO
+========
+
+Since, it was a while since I worked on this; I had to redo a lot of the learning I did when I originally
+wrote this piece of software. I have taken insperation for the conversion back from MGRS to UTM from 
+http://www.stellman-greene.com/mgrs_to_utm/. This code is GPL and I would recommend using it over this 
+library if it makes sense. However, if you still want to use my code go ahead. I will continue to work
+on this library as I have the time.
+
 
 TODO
 ====
